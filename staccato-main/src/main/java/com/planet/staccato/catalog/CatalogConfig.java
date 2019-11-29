@@ -37,10 +37,10 @@ public class CatalogConfig {
     public Catalog rootCatalog() {
         Catalog catalog = new Catalog();
 
-        catalog.setId("staccato");
-        catalog.setTitle("Staccato");
+        catalog.setId("geoanalytics_ca");
+        catalog.setTitle("GEO Analytics Canada");
         catalog.setVersion(configProps.getVersion());
-        catalog.setDescription("STAC v" + configProps.getVersion() + " implementation by Planet Labs");
+        catalog.setDescription("STAC v" + configProps.getVersion() + " served by GEO Analytics Canada");
 
         catalog.getLinks().add(Link.build()
                 .rel("self")

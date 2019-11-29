@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Data
-public class MOD11A1CollectionMetadata extends CollectionMetadataAdapter<ModisItemProperties> {
+public class MOD11A1CollectionMetadata extends CollectionMetadataAdapter<MOD11A1ItemProperties> {
 
     public static final String ID = "modis.mod11a1";
     public static final String TITLE = "MODIS MOD11A1";
@@ -32,7 +32,7 @@ public class MOD11A1CollectionMetadata extends CollectionMetadataAdapter<ModisIt
         setVersion(VERSION);
         setLicense(LICENSE);
         keywords.addAll(Arrays.asList(KEYWORDS));
-        properties = new ModisItemProperties();
+        properties = new MOD11A1ItemProperties();
 
         buildProperties();
         buildProviders();
