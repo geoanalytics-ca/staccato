@@ -18,7 +18,7 @@ public class MOD11A1AutoConfig {
     private final LinksConfigProps linksConfigProps;
 
     @Bean
-    public CollectionMetadata modisCollection() {
+    public CollectionMetadata mod11a1Collection() {
         MOD11A1CollectionMetadata metadata = new MOD11A1CollectionMetadata();
         metadata.links(LinkHelper.buildCollectionLinks(metadata.getId()))
                 .catalogType(CatalogType.COLLECTION);
@@ -26,7 +26,7 @@ public class MOD11A1AutoConfig {
     }
 
     @Bean
-    public CollectionMetadata modisCatalog() {
+    public CollectionMetadata mod11a1Catalog() {
         MOD11A1CollectionMetadata metadata = new MOD11A1CollectionMetadata();
         metadata.links(LinkHelper.buildCollectionLinks(metadata.getId()))
                 .setCatalogType(CatalogType.CATALOG);

@@ -4,7 +4,6 @@ import com.planet.staccato.collection.CatalogType;
 import com.planet.staccato.collection.CollectionMetadata;
 import com.planet.staccato.collection.LinkHelper;
 import com.planet.staccato.config.LinksConfigProps;
-import com.planet.staccato.modis.ModisCollectionMetadata;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,7 +17,7 @@ public class MOD09GQAutoConfig {
     private final LinksConfigProps linksConfigProps;
 
     @Bean
-    public CollectionMetadata modisCollection() {
+    public CollectionMetadata mod09gqCollection() {
         MOD09GQCollectionMetadata metadata = new MOD09GQCollectionMetadata();
         metadata.links(LinkHelper.buildCollectionLinks(metadata.getId()))
                 .catalogType(CatalogType.COLLECTION);
@@ -26,7 +25,7 @@ public class MOD09GQAutoConfig {
     }
 
     @Bean
-    public CollectionMetadata modisCatalog() {
+    public CollectionMetadata mod09gqCatalog() {
         MOD09GQCollectionMetadata metadata = new MOD09GQCollectionMetadata();
         metadata.links(LinkHelper.buildCollectionLinks(metadata.getId()))
                 .setCatalogType(CatalogType.CATALOG);

@@ -1,4 +1,4 @@
-package com.planet.staccato.modis.mod09gq;
+package com.planet.staccato.modis.mod13q1;
 
 import com.planet.staccato.collection.CollectionMetadataAdapter;
 import com.planet.staccato.extension.EO;
@@ -11,18 +11,18 @@ import java.util.Arrays;
 import java.util.List;
 
 @Data
-public class MOD09GQCollectionMetadata extends CollectionMetadataAdapter<ModisItemProperties> {
+public class MOD13Q1CollectionMetadata extends CollectionMetadataAdapter<ModisItemProperties> {
 
-    public static final String ID = "modis.mod09gq";
-    public static final String TITLE = "MODIS MOD09GQ";
-    public static final String DESCRIPTION = "MODIS/Terra Surface Reflectance Daily L2G Global 250 m SIN Grid ";
+    public static final String ID = "modis.mod13q1";
+    public static final String TITLE = "MODIS MOD13Q1";
+    public static final String DESCRIPTION = "MODIS/Terra Vegetation Indices 16-Day L3 Global 250 m SIN Grid";
     public static final String VERSION = "6.0.0";
     public static final String LICENSE = "";
-    public static final String[] KEYWORDS = {"modis", "modis-terra", "modis-aqua", "terra", "aqua", "MOD09GQ"};
+    public static final String[] KEYWORDS = {"modis", "modis-terra", "modis-aqua", "terra", "aqua", "MOD13Q1"};
     public static final String CRS = "http://www.opengis.net/def/crs/OGC/1.3/CRS84";
 
 
-    public MOD09GQCollectionMetadata() {
+    public MOD13Q1CollectionMetadata() {
         super();
 
         setId(ID);
@@ -52,7 +52,7 @@ public class MOD09GQCollectionMetadata extends CollectionMetadataAdapter<ModisIt
         providers.add(Provider.build()
                 .name("LP-DAAC")
                 .addRole(Provider.Role.PRODUCER)
-                .url("https://lpdaac.usgs.gov/products/mod09gqv006/"));
+                .url("https://lpdaac.usgs.gov/products/mod13q1v006/"));
     }
 
     private void buildProperties() {

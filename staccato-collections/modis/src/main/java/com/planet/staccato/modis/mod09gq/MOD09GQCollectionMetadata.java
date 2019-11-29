@@ -15,7 +15,7 @@ public class MOD09GQCollectionMetadata extends CollectionMetadataAdapter<ModisIt
 
     public static final String ID = "modis.mod09gq";
     public static final String TITLE = "MODIS MOD09GQ";
-    public static final String DESCRIPTION = "Daily 250 m Terra Surface Reflectance";
+    public static final String DESCRIPTION = "MODIS/Terra Surface Reflectance Daily L2G Global 250 m SIN Grid";
     public static final String VERSION = "6.0.0";
     public static final String LICENSE = "";
     public static final String[] KEYWORDS = {"modis", "modis-terra", "modis-aqua", "terra", "aqua", "MOD09GQ"};
@@ -57,7 +57,7 @@ public class MOD09GQCollectionMetadata extends CollectionMetadataAdapter<ModisIt
 
     private void buildProperties() {
         properties.setPlatform("modis");
-        properties.setInstrument("modis");
+        properties.setInstrument("MODIS Terra");
         properties.setConstellation("modis");
         properties.setOffNadir(0);
         properties.setBands(buildBands());

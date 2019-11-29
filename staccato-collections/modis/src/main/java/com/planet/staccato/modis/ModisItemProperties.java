@@ -41,6 +41,9 @@ public class ModisItemProperties implements CoreProperties, EO, Modis {
     private List<Band> bands;
 
     // MODIS
-
+    private Integer year;
+    private Integer month;
+    private Integer day;
+    private String dayNightFlag;
 }
 
