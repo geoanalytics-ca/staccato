@@ -14,8 +14,6 @@
     <modules>
         <module>landsat8</module>
         <module>planet</module>
-        <module>modis</module>
-        <module>modis-mod09gq</module>
     </modules>
 
     <properties>

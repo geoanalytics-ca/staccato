@@ -74,6 +74,11 @@
                 <artifactId>landsat8</artifactId>
                 <version>${staccato.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.planet.staccato</groupId>
+                <artifactId>modis</artifactId>
+                <version>${staccato.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.planet.staccato</groupId>
