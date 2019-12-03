@@ -1,15 +1,15 @@
-package com.planet.staccato.modis;
+package com.planet.staccato.modis.mod09gq;
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.planet.staccato.collection.Subcatalog;
 import com.planet.staccato.elasticsearch.annotation.Mapping;
 import com.planet.staccato.elasticsearch.annotation.MappingType;
 
-public interface Modis {
+/**
+ * This class is added in order to provide Subcatalog features to the collection
+ */
+public interface MOD09GQ {
     String EXTENSION_PREFIX = "modis";
-    // TODO day/night flag
-    // TODO granule size
-    // TODO collection concept id
 
     @Subcatalog
     @Mapping(type = MappingType.KEYWORD)

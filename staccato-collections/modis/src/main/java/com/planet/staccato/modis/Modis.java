@@ -5,11 +5,11 @@ import com.planet.staccato.collection.Subcatalog;
 import com.planet.staccato.elasticsearch.annotation.Mapping;
 import com.planet.staccato.elasticsearch.annotation.MappingType;
 
+/**
+ * This class is added in order to provide Subcatalog features to the collection
+ */
 public interface Modis {
     String EXTENSION_PREFIX = "modis";
-    // TODO day/night flag
-    // TODO granule size
-    // TODO collection concept id
 
     @Subcatalog
     @Mapping(type = MappingType.KEYWORD)

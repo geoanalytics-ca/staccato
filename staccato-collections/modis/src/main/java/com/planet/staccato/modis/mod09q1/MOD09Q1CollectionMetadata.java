@@ -16,7 +16,7 @@ public class MOD09Q1CollectionMetadata extends CollectionMetadataAdapter<MOD09Q1
     public static final String ID = "modis.mod09q1";
     public static final String TITLE = "MODIS MOD09Q1";
     public static final String DESCRIPTION = "MODIS/Terra Surface Reflectance 8-Day L3 Global 250 m SIN Grid";
-    public static final String VERSION = "6.0.0";
+    public static final String VERSION = "0.8.0";
     public static final String LICENSE = "";
     public static final String[] KEYWORDS = {"modis", "modis-terra", "modis-aqua", "terra", "aqua", "MOD09Q1"};
     public static final String CRS = "http://www.opengis.net/def/crs/OGC/1.3/CRS84";

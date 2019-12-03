@@ -37,7 +37,7 @@ public class CatalogConfig {
     public Catalog rootCatalog() {
         Catalog catalog = new Catalog();
 
-        catalog.setId("geoanalytics_ca");
+        catalog.setId("geoanalytics-ca");
         catalog.setTitle("GEO Analytics Canada");
         catalog.setVersion(configProps.getVersion());
         catalog.setDescription("STAC v" + configProps.getVersion() + " served by GEO Analytics Canada");

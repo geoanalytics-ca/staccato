@@ -16,7 +16,7 @@ public class MCD12Q1CollectionMetadata extends CollectionMetadataAdapter<MCD12Q1
     public static final String ID = "modis.mcd12q1";
     public static final String TITLE = "MODIS MCD12Q1";
     public static final String DESCRIPTION = "MODIS/Terra+Aqua Land Cover Type Yearly L3 Global 500 m SIN Grid";
-    public static final String VERSION = "6.0.0";
+    public static final String VERSION = "0.8.0";
     public static final String LICENSE = "";
     public static final String[] KEYWORDS = {"modis", "modis-terra", "modis-aqua", "terra", "aqua", "MCD12Q1"};
     public static final String CRS = "http://www.opengis.net/def/crs/OGC/1.3/CRS84";

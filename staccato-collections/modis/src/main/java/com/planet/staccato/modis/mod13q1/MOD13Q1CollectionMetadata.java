@@ -16,7 +16,7 @@ public class MOD13Q1CollectionMetadata extends CollectionMetadataAdapter<MOD13Q1
     public static final String ID = "modis.mod13q1";
     public static final String TITLE = "MODIS MOD13Q1";
     public static final String DESCRIPTION = "MODIS/Terra Vegetation Indices 16-Day L3 Global 250 m SIN Grid";
-    public static final String VERSION = "6.0.0";
+    public static final String VERSION = "0.8.0";
     public static final String LICENSE = "";
     public static final String[] KEYWORDS = {"modis", "modis-terra", "modis-aqua", "terra", "aqua", "MOD13Q1"};
     public static final String CRS = "http://www.opengis.net/def/crs/OGC/1.3/CRS84";

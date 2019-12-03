@@ -99,16 +99,6 @@
 
         <dependency>
             <groupId>com.planet.staccato</groupId>
-            <artifactId>landsat8</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.planet.staccato</groupId>
-            <artifactId>planet</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.planet.staccato</groupId>
             <artifactId>modis</artifactId>
         </dependency>
 
@@ -167,7 +157,7 @@
                     <executable>true</executable>
                 </configuration>
             </plugin>
-
+<!--
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
@@ -196,11 +186,11 @@
                     </dependency>
                 </dependencies>
             </plugin>
-
             <plugin>
                 <groupId>pl.project13.maven</groupId>
                 <artifactId>git-commit-id-plugin</artifactId>
             </plugin>
+-->
         </plugins>
     </build>
 

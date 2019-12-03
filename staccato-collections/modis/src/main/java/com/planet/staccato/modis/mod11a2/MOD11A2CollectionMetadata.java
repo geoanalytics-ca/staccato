@@ -16,7 +16,7 @@ public class MOD11A2CollectionMetadata extends CollectionMetadataAdapter<MOD11A2
     public static final String ID = "modis.mod11a2";
     public static final String TITLE = "MODIS MOD11A2";
     public static final String DESCRIPTION = "MODIS/Terra Land Surface Temperature/Emissivity 8-Day L3 Global 1 km SIN Grid";
-    public static final String VERSION = "6.0.0";
+    public static final String VERSION = "0.8.0";
     public static final String LICENSE = "";
     public static final String[] KEYWORDS = {"modis", "modis-terra", "modis-aqua", "terra", "aqua", "MOD11A2"};
     public static final String CRS = "http://www.opengis.net/def/crs/OGC/1.3/CRS84";

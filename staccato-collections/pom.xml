@@ -12,8 +12,6 @@
     <description>Staccato Collections</description>
 
     <modules>
-        <module>landsat8</module>
-        <module>planet</module>
         <module>modis</module>
     </modules>
 

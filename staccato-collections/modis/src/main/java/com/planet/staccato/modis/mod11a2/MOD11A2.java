@@ -1,4 +1,4 @@
-package com.planet.staccato.modis;
+package com.planet.staccato.modis.mod11a2;
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.planet.staccato.collection.Subcatalog;
@@ -8,7 +8,7 @@ import com.planet.staccato.elasticsearch.annotation.MappingType;
 /**
  * This class is added in order to provide Subcatalog features to the collection
  */
-public interface Modis {
+public interface MOD11A2 {
     String EXTENSION_PREFIX = "modis";
 
     @Subcatalog
