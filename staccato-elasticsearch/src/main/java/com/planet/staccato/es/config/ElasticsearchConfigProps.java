@@ -18,7 +18,9 @@ import java.util.Map;
 public class ElasticsearchConfigProps {
 
     private String scheme = "http";
-    private String host = "localhost";
+    private String host = "elasticsearch-master";
+    // private String host = "es01";
+    // private String host = "localhost";
     private int port = 9200;
     private String user;
     private String password;

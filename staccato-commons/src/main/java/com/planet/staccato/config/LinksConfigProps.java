@@ -37,9 +37,10 @@ public class LinksConfigProps {
 
     @Data
     public static class Self {
-        private String scheme = "http";
-        private String host = "localhost";
-        private Integer port = 8080;
+        private String scheme = "https";
+        private String host = "stac.geoanalytics.ca";
+        private Integer port = 80;
+        // private Integer port = 8080;
         private String contextPath = "/";
     }
 

@@ -34,18 +34,18 @@ logging:
     #com.planet: DEBUG
     org.springframework: DEBUG
     #com.fasterxml: DEBUG
-    com.planet.staccato.es.initializer: DEBUG
+    #com.planet.staccato.es.initializer: DEBUG
     #com.planet.staccato.es.repository: DEBUG
     #io.grpc: DEBUG
-    org.springframework.web.reactive: TRACE
+    #org.springframework.web.reactive: TRACE
     o.s.b.web.embedded.netty.NettyWebServer: INFO
     org.springframework.web: DEBUG
     #com.planet.ng.bcis.index.rsocket: DEBUG
     #reactor.ipc: trace
-    io.api: DEBUG
-    org.springframework.web.reactive.function.client: debug
-    org.springframework.boot.actuate.endpoint.web.reactive.WebFluxEndpointHandlerMapping: WARN
-    org.springframework.web.reactive.result.method.annotation.RequestMappingHandlerMapping: WARN
+    #io.api: DEBUG
+    #org.springframework.web.reactive.function.client: debug
+    #org.springframework.boot.actuate.endpoint.web.reactive.WebFluxEndpointHandlerMapping: WARN
+    #org.springframework.web.reactive.result.method.annotation.RequestMappingHandlerMapping: WARN
 
 staccato:
   version: 0.8.0
@@ -62,5 +62,5 @@ staccato:
       auto-initialize: true
       aliases:
         # alias key name should be the alias name, value should be the alias providers value
-        landsat-8-l1: landsat-8-l1
+        # landsat-8-l1: landsat-8-l1
 

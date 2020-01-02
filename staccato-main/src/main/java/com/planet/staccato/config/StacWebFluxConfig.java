@@ -25,7 +25,7 @@ public class StacWebFluxConfig implements WebFluxConfigurer {
 //                .maxAge(3600);
 //
         corsRegistry.addMapping("/**")
-                .allowedOrigins("*")
+                .allowedOrigins("https://stac.geoanalytics.ca", "https://browse.stac.geoanalytics.ca", "http://localhost:1234")
                 .allowedMethods("*")
 //                .allowedHeaders("*")
 //                .exposedHeaders("Access-Control-Allow-Origin",
