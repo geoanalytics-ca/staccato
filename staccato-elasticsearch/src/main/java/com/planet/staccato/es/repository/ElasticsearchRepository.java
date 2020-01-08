@@ -126,11 +126,11 @@ public class ElasticsearchRepository {
                 // build the meta object and return the search hits
                 .flatMapIterable(response -> ItemCollectionBuilder.buildMeta(searchMetadata, response, searchRequest))
                 // process all the hits in parallel -- will use all CPU cores by default
-                .parallel().runOn(Schedulers.parallel())
+                ///.parallel().runOn(Schedulers.parallel())
                 // map each hit to it's source bytes
                 .map(hit -> SerializationUtils.deserializeItem(hit.getSourceRef().toBytesRef().bytes, mapper))
                 // revert to sequential processing
-                .sequential()
+                ///.sequential()
                 .collectList()
                 // take the api list build an item collection from it
                 .map(itemList -> ItemCollectionBuilder.buildItemCollection(searchMetadata, itemList, searchRequest));
@@ -197,7 +197,7 @@ public class ElasticsearchRepository {
     protected void configureSort(SearchSourceBuilder searchSourceBuilder, SortExtension sort) {
         if (sort == null || sort.isEmpty()) {
             searchSourceBuilder
-                    .sort(new FieldSortBuilder("properties.datetime").order(SortOrder.DESC))
+                    .sort(new FieldSortBuilder("properties.datetime").order(SortOrder.ASC))
                     .sort(new FieldSortBuilder("id").order(SortOrder.ASC));
             return;
         }
