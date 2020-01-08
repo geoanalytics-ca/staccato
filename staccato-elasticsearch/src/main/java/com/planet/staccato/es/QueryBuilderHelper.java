@@ -164,8 +164,11 @@ public class QueryBuilderHelper {//implements QueryBuilder {
         ShapeBuilder shapeBuilder = null;
         switch (type) {
             case "Point":
-                List<Double> pointCoords = (List<Double>) intersectsMap.get("coordinates");
-                shapeBuilder = new PointBuilder(pointCoords.get(0), pointCoords.get(1));
+                List pointCoords = (List) intersectsMap.get("coordinates");
+                shapeBuilder = new PointBuilder(
+                        ((Number)pointCoords.get(0)).doubleValue(),
+                        ((Number)pointCoords.get(1)).doubleValue()
+                );
                 break;
             case "Polygon":
                 List polygonCoords = (List) intersectsMap.get("coordinates");
@@ -173,7 +176,10 @@ public class QueryBuilderHelper {//implements QueryBuilder {
                 // TODO this needs to be more robust
                 for (Object o : (List) polygonCoords.get(0)) {
                     List innerCoords = (List) o;
-                    polygonCoordsBuilder.coordinate((double) innerCoords.get(0), (double) innerCoords.get(1));
+                    polygonCoordsBuilder.coordinate(
+                            ((Number) innerCoords.get(0)).doubleValue(),
+                            ((Number) innerCoords.get(1)).doubleValue()
+                    );
                 }
                 shapeBuilder = new PolygonBuilder(polygonCoordsBuilder);
                 break;
@@ -182,7 +188,10 @@ public class QueryBuilderHelper {//implements QueryBuilder {
                 CoordinatesBuilder lineStringCoordsBuilder = new CoordinatesBuilder();
                 for (Object o : lineStringCoords) {
                     List innerCoords = (List) o;
-                    lineStringCoordsBuilder.coordinate((double) innerCoords.get(0), (double) innerCoords.get(1));
+                    lineStringCoordsBuilder.coordinate(
+                            ((Number) innerCoords.get(0)).doubleValue(),
+                            ((Number) innerCoords.get(1)).doubleValue()
+                    );
                 }
                 shapeBuilder = new LineStringBuilder(lineStringCoordsBuilder);
                 break;
