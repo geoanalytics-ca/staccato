@@ -92,7 +92,6 @@ public class ElasticsearchApiService implements ApiService {
     public Mono<ItemCollection> getItems(SearchRequest searchRequest) {
         Set<String> indices = getIndices(searchRequest);
         BoolQueryBuilder boolQueryBuilder = QueryBuilderHelper.buildQuery(searchRequest);
-
         Mono<ItemCollection> itemCollection = repository.searchItemCollection(indices, boolQueryBuilder, searchRequest);
         return processor.searchItemCollectionMono(itemCollection, searchRequest);
     }

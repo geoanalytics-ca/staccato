@@ -117,7 +117,7 @@ public class ElasticsearchCatalogService implements CatalogService {
      * @return The collection of item results wrapped in a Mono
      */
     @Override
-    public Mono<ItemCollection> getItems(String collectionId, Map<String, String> pathVariables) {
+    public Mono<ItemCollection> getItems(String collectionId, Map<String, String> pathVariables, com.planet.staccato.dto.api.SearchRequest searchRequest) {
         StringBuilder sb = new StringBuilder();
         Iterator<Map.Entry<String, String>> it = pathVariables.entrySet().iterator();
 
@@ -128,10 +128,8 @@ public class ElasticsearchCatalogService implements CatalogService {
                 sb.append(" AND ");
             }
         }
-        com.planet.staccato.dto.api.SearchRequest searchRequest = new com.planet.staccato.dto.api.SearchRequest();
         String query = sb.toString().isBlank() ? null : sb.toString();
         searchRequest.setQuery(query);
-        searchRequest.setLimit(10);
         searchRequest.setCollections(new String[]{collectionId});
         return searchService.getItems(searchRequest);
     }
