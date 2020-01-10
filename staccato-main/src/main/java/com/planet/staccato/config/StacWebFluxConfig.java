@@ -20,10 +20,12 @@ public class StacWebFluxConfig implements WebFluxConfigurer {
                         "http://localhost:1234",
                         "http://localhost:8080",
                         "https://stac.geoanalytics.ca",
-                        "https://browse.stac.geoanalytics.ca"
+                        "https://browse.stac.geoanalytics.ca",
+                        "http://dex.geoanalytics.ca:5556",
+                        "https://dex.geoanalytics.ca:5556"
                 )
                 .allowedHeaders("*")
-                .allowedMethods("*")
+                .allowedMethods("GET", "HEAD", "POST", "OPTIONS")
                 .allowCredentials(true);
 //                .allowedMethods("GET", "POST", "PUT");
 //                .allowedOrigins("*")
