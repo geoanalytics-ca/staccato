@@ -1,6 +1,7 @@
 package com.planet.staccato.service;
 
 import com.planet.staccato.collection.CollectionMetadata;
+import com.planet.staccato.dto.api.SearchRequest;
 import com.planet.staccato.model.Item;
 import com.planet.staccato.model.ItemCollection;
 import reactor.core.publisher.Mono;
@@ -19,5 +20,5 @@ public interface CatalogService {
 
     List<String> getValuesForField(CollectionMetadata collection, List<String> path);
 
-    Mono<ItemCollection> getItems(String collectionId, Map<String, String> pathVariables);
+    Mono<ItemCollection> getItems(String collectionId, Map<String, String> pathVariables, SearchRequest searchRequest);
 }

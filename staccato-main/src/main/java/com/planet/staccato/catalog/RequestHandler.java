@@ -11,6 +11,7 @@ import com.planet.staccato.service.CatalogService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import reactor.core.publisher.Mono;
 
@@ -37,7 +38,8 @@ public class RequestHandler {
         // api for all items with the given subcatalog parameters
         Map<String, String> subcatalogPathParamMap = subcatalogPropertiesService
                 .createSubcatalogPathParamMap(collection.getId(), request.path());
-        return catalogService.getItems(collection.getId(), subcatalogPathParamMap);
+        SearchRequest searchRequest = convertItemsRequestParamsToSearchRequest(request.queryParams());
+        return catalogService.getItems(collection.getId(), subcatalogPathParamMap, searchRequest);
     }
 
     public Mono<Item> handleItemRequest(CollectionMetadata collection, ServerRequest request) {
@@ -45,6 +47,27 @@ public class RequestHandler {
         String[] pathParts = request.path().split("/");
         String itemId = pathParts[pathParts.length - 1];
         return catalogService.getItem(itemId, collection.getId());
+    }
+
+    /**
+     * Search params for SearchRequest values that can be specified by items request
+     * https://stacspec.org/STAC-api.html#operation/getFeatures
+     *
+     * @param params
+     * @return
+     */
+    public SearchRequest convertItemsRequestParamsToSearchRequest(MultiValueMap<String, String> params) {
+        SearchRequest request = new SearchRequest();
+        request.setDatetime(params.getFirst("datetime"));
+        request.setNext(params.getFirst("next"));
+        try {
+            int limit = Integer.parseInt(params.getFirst("limit"));
+            request.setLimit(limit);
+        } catch (NumberFormatException e) {
+            log.warn("Error parsing limit", e);
+        }
+        // TODO also set bbox
+        return request;
     }
 
     /**
