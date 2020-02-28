@@ -5,7 +5,7 @@
     
     <groupId>com.planet.staccato</groupId>
     <artifactId>staccato</artifactId>
-    <version>0.8.0.4</version>
+    <version>0.8.0.5</version>
     <packaging>pom</packaging>
 
     <parent>
@@ -72,6 +72,16 @@
             <dependency>
                 <groupId>com.planet.staccato</groupId>
                 <artifactId>modis</artifactId>
+                <version>${staccato.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.planet.staccato</groupId>
+                <artifactId>modis_derived</artifactId>
+                <version>${staccato.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.planet.staccato</groupId>
+                <artifactId>landsat8</artifactId>
                 <version>${staccato.version}</version>
             </dependency>
             <dependency>

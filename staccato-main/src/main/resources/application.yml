@@ -32,14 +32,14 @@ logging:
     #io.netty: DEBUG
     #com.planet.staccato.rsocket: DEBUG
     #com.planet: DEBUG
-    org.springframework: DEBUG
+    org.springframework: INFO
     #com.fasterxml: DEBUG
     #com.planet.staccato.es.initializer: DEBUG
     #com.planet.staccato.es.repository: DEBUG
     #io.grpc: DEBUG
     #org.springframework.web.reactive: TRACE
     o.s.b.web.embedded.netty.NettyWebServer: INFO
-    org.springframework.web: DEBUG
+    org.springframework.web: INFO
     #com.planet.ng.bcis.index.rsocket: DEBUG
     #reactor.ipc: trace
     #io.api: DEBUG

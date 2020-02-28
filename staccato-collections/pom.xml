@@ -5,7 +5,7 @@
 
     <groupId>com.planet.staccato</groupId>
     <artifactId>staccato-collections</artifactId>
-    <version>0.8.0.4</version>
+    <version>0.8.0.5</version>
     <packaging>pom</packaging>
 
     <name>staccato-collections</name>
@@ -13,6 +13,8 @@
 
     <modules>
         <module>modis</module>
+        <module>landsat8</module>
+        <module>modis_derived</module>
     </modules>
 
     <properties>

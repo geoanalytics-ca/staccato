@@ -1,3 +1,20 @@
+## Hatfield Instructions
+
+### Development
+
+1. Compile
+  - run `mvn clean install` on main repository
+
+2. Run Web server
+  - run `mvn spring-boot:run`
+
+### Build
+
+1. Update version number using `update_version.sh` script
+2. Ensure host end points are set correctly under `staccato-commons/src/main/java/com.planet.staccato/config/LinksConfigProps.java`
+3. Ensure CORS config are set correctly under `staccato-main/src/main/java/com.planet.staccato/config/StacWebFluxConfig`
+4. Build command `mvn clean install` should create docker image
+
 
 [![Build Status](https://travis-ci.org/planetlabs/staccato.svg?branch=master)](https://travis-ci.org/planetlabs/staccato)
 [![Docker Repository on Quay](https://quay.io/repository/boundlessgeo/staccato/status "Docker Repository on Quay")](https://quay.io/repository/boundlessgeo/staccato)
